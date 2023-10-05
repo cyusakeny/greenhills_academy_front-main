@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit&family=Poppins&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1 {
+  font-weight: bold;
+  font-family: "Outfit";
+}
+
+/* Default font size for smaller screens */
+h1 {
+  font-size: 4vw;
+}
+
+/* Adjust font size for medium-sized screens */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3vw;
+  }
+}
+
+/* Adjust font size for larger screens */
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 4vw;
+  }
+}
+
+
+
+/* Default font size for smaller screens */
+h2 {
+  font-weight: bold;
+  font-family: "Outfit";
+  font-size: 4vw;
+}
+
+/* Adjust font size for medium-sized screens */
+@media (min-width: 768px) {
+  h2 {
+    font-size: 3vw;
+  }
+}
+
+/* Adjust font size for larger screens */
+@media (min-width: 1200px) {
+  h2 {
+    font-size: 2vw;
+  }
+}
+
+/* Default font size for smaller screens */
+h3 {
+  font-size: 2.5vw; /* Adjust the value as needed */
+  font-weight: 500;
+  font-family: "Outfit";
+}
+
+/* Adjust font size for medium-sized screens */
+@media (min-width: 768px) {
+  h3 {
+    font-size: 2vw; /* Adjust the value as needed */
+  }
+}
+
+/* Adjust font size for larger screens */
+@media (min-width: 1200px) {
+  h3 {
+    font-size: 1.8vw; /* Adjust the value as needed */
+  }
+}
+
+
+body {
+  font-family: "Outfit", sans-serif;
+}
+
+/* Default font size for paragraphs */
+p {
+  font-size: 1.7vw; /* Adjust the value as needed */
+  font-style: normal;
+  font-family: "Outfit", sans-serif;
+}
+
+/* Default font size for h4 elements */
+h4 {
+  font-size: 2vw; /* Adjust the value as needed */
+  font-weight: normal; /* Corrected the font weight property value */
+  font-family: "Outfit";
+}
+
+/* Default styles for buttons */
+button {
+  width: 17.8vw; /* 17.8% of the viewport width */
+}
+
+/* Adjust font size for medium-sized screens */
+@media (max-width: 1060px) {
+  p {
+    font-size: 1.8vw; /* Adjust the value as needed */
+  }
+
+  h4 {
+    font-size: 1.8vw; /* Adjust the value as needed */
+  }
+
+  button {
+    width: 15vw; /* Adjust the value as needed */
+  }
+}
+
+/* Adjust font size for larger screens */
+@media (min-width: 1061px) {
+  p {
+    font-size: 1.3vw; /* Adjust the value as needed */
+  }
+
+  h4 {
+    font-size: 1.6vw; /* Adjust the value as needed */
+  }
+
+  button {
+    height: 3.5vw; /* Adjust the value as needed */
+    width: 13vw; /* Adjust the value as needed */
+  }
+}
+
+button:hover {
+  color: #fff;
+  background-color: #018c79; /* Change to your desired hover color */
+}
+.button1 {
+  height: 47px;
+  width: 178px;
+}
+
+
+/* Style for the Link component when hovered */
+/* a:hover {
+  color: #018c79; /* Change to your desired hover color */
+/* } */
+
+/* Default styles for links */
+a {
+  font-size: 2vw; /* 2% of the viewport width */
+  text-decoration: none;
+  font-family: "Outfit";
+  font-weight: 400;
+}
+
+/* Default styles for input elements */
+input,
+textarea {
+    width: 100%;
+    padding: 0.4vw; /* 0.4% of the viewport width */
+    border-radius: 2vw; /* 2% of the viewport width */
+    border: 0.1vw solid #E5E5E5; /* 0.1% of the viewport width */
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.03125vw; /* 0.03125% of the viewport width */
+}
+
+/* Medium-sized screens */
+@media (max-width: 1060px) {
+  a {
+    font-size: 3vw; /* Adjust the value as needed */
+  }
+
+  input,
+  textarea {
+    padding: 0.5vw; /* Adjust the value as needed */
+    border-radius: 0.3vw; /* Adjust the value as needed */
+    border-width: 0.08vw; /* Adjust the value as needed */
+    gap: 0.025vw; /* Adjust the value as needed */
+  }
+}
+
+/* Larger screens */
+@media (min-width: 1061px) {
+  a {
+    font-size: 1.1vw; /* Adjust the value as needed */
+  }
+
+  input,
+  textarea {
+    padding: 0.5vw; /* Adjust the value as needed */
+    border-radius: 0.3vw; /* Adjust the value as needed */
+    border-width: 0.07vw; /* Adjust the value as needed */
+    gap: 0.020vw; /* Adjust the value as needed */
+  }
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+.square {
+  height: 100%;
+  background: red;
+}
+
+.title {
+  color: black;
+  margin-top: 5rem;
+}
+
+
+#scroll-container {
+  overflow: hidden;
+}
+#scroll-text {
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  -moz-animation: my-animation 120s linear infinite;
+  -webkit-animation: my-animation 120s linear infinite;
+  animation: my-animation 120s linear infinite;
+}
+/* for firefox */
+@-moz-keyframes my-animation {
+  from {
+    -moz-transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(-100%);
+  }
+}
+
+/* for chrome */
+@-webkit-keyframes my-animation {
+  from {
+    -webkit-transform: translateX(100%);
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+  }
+}
+
+@keyframes my-animation {
+  from {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
