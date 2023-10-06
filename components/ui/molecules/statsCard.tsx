@@ -2,7 +2,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
 
-
 const Stats = () => {
   const [learnerCount, setLearnerCount] = useState<number>(0);
   const [nationalityCount, setNationalityCount] = useState<number>(0);
