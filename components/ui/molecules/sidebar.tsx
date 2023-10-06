@@ -60,7 +60,7 @@ export const SideBar: React.FC = () => {
           onMouseLeave={() => handleMenuItemClick(null)}
         >
           <HiMiniUserGroup className="w-[24px] h-[24px] bg-white"/>
-          <Link href="/staff">Staff</Link>
+          <Link href="/dashboard/staff">Staff</Link>
           {isItemActive("staff") && (
             <div className="h-10 w-1 bg-primary absolute left-0 right-0"></div>
           )}

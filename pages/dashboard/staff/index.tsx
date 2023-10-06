@@ -1,12 +1,12 @@
 import React from "react";
 import DashboardLayout from "@/components/DashboardLayout";
-import Content from "./school";
+import Staff from "./staff";
 
 function School() {
   return (
     <div>
-      <DashboardLayout head="wep page">
-        <Content />
+      <DashboardLayout head="event page/event section" style="text-base opacity-50">
+        <Staff />
       </DashboardLayout>
     </div>
   );
