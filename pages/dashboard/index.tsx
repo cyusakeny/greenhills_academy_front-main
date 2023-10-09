@@ -1,11 +1,16 @@
-
 import React from "react";
-import MainDashboard from "./main_dashboard";
+import DashboardLayout from "@/components/DashboardLayout";
+import DashbaordContent from "./content/dashboard_content";
 
-export default function About() {
+
+export default function Dashbaord() {
   return (
-    <div className="w-[100vw]">
-      <MainDashboard />
-    </div>
+    <>
+      <div className="w-[100vw]">
+        <DashboardLayout>
+          <DashbaordContent />
+        </DashboardLayout>
+      </div>
+    </>
   );
 }
