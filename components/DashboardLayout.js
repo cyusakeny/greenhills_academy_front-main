@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 const DashboardLayout = (props) => {
   return (
     <>
-      <div className="bg-[#F5FBFF] flex h-screen w-[100vw]">
+      <div className="bg-[#F5FBFF] flex h-full w-[100vw]">
         <SideBar />
         <main className="flex flex-col">
           <TopBar />

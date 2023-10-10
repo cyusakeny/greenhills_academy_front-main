@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import dynamic from "next/dynamic";
-import Link from "next/link";
-import {HiMiniUserGroup} from "react-icons/hi2"
+
 export const SideBar: React.FC = () => {
   const [activeItem, setActiveItem] = useState(null);
 
@@ -18,7 +16,7 @@ export const SideBar: React.FC = () => {
   };
 
   return (
-    <div className="bg-white sticky top-0 h-full w-[300px] flex flex-col">
+    <div className="bg-white h-screen w-[300px] flex flex-col">
       <div className="mb-[30px] p-4 w-full mx-auto flex justify-center items-center">
         <img src="/images/logo.png" alt="" className="w-[100px]" />
       </div>
@@ -32,7 +30,7 @@ export const SideBar: React.FC = () => {
           onMouseLeave={() => handleMenuItemClick(null)}
         >
           <img src="/images/home.svg" alt="" />
-          <Link href="/" className="">Home</Link>
+          <p className="">Home</p>
           {isItemActive("home") && (
             <div className="h-10 w-1 bg-primary absolute left-0 right-0"></div>
           )}
@@ -46,22 +44,8 @@ export const SideBar: React.FC = () => {
           onMouseLeave={() => handleMenuItemClick(null)}
         >
           <img src="/images/news.svg" alt="" />
-          <Link href="/dashboard/school">News and events</Link>
+          <p>News and events</p>
           {isItemActive("news") && (
-            <div className="h-10 w-1 bg-primary absolute left-0 right-0"></div>
-          )}
-        </div>
-        <div
-          className={`flex gap-4 mb-10 ${
-            isItemActive("news") ? "cursor-pointer" : ""
-          }`}
-          onClick={() => handleMenuItemClick("staff")}
-          onMouseEnter={() => handleMenuItemClick("staff")}
-          onMouseLeave={() => handleMenuItemClick(null)}
-        >
-          <HiMiniUserGroup className="w-[24px] h-[24px] bg-white"/>
-          <Link href="/dashboard/staff">Staff</Link>
-          {isItemActive("staff") && (
             <div className="h-10 w-1 bg-primary absolute left-0 right-0"></div>
           )}
         </div>
@@ -74,7 +58,7 @@ export const SideBar: React.FC = () => {
           onMouseLeave={() => handleMenuItemClick(null)}
         >
           <img src="/images/admission.svg" alt="" />
-          <Link href="/dashboard/statistic">Admission</Link>
+          <p>Admission</p>
           {isItemActive("admission") && (
             <div className="h-10 w-1 bg-primary absolute left-0 right-0"></div>
           )}
@@ -88,7 +72,7 @@ export const SideBar: React.FC = () => {
           onMouseLeave={() => handleMenuItemClick(null)}
         >
           <img src="/images/news.svg" alt="" />
-          <Link href="/dashboard/customize">Customization</Link>
+          <p>Customization</p>
           {isItemActive("customization") && (
             <div className="h-10 w-1 bg-primary absolute left-0 right-0"></div>
           )}
@@ -103,7 +87,7 @@ export const SideBar: React.FC = () => {
         >
           <p className="flex gap-4">
             <img src="/images/calendar.svg" alt="" />
-            <Link href="">Schedule</Link>
+            <p>Schedule</p>
             {isItemActive("schedule") && (
               <div className="h-10 w-1 bg-primary absolute left-0 right-0"></div>
             )}
@@ -122,7 +106,7 @@ export const SideBar: React.FC = () => {
         >
           <p className="flex gap-4">
             <img src="/images/person.svg" alt="" />
-            <Link href="">Profile</Link>
+            <p>Profile</p>
             {isItemActive("profile") && (
               <div className="h-10 w-1 bg-primary absolute left-0 right-0"></div>
             )}
@@ -136,4 +120,4 @@ export const SideBar: React.FC = () => {
   );
 };
 
-export default dynamic(() => Promise.resolve(SideBar), {ssr: false});
+export default SideBar;
