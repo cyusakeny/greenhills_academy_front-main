@@ -18,7 +18,7 @@ export const SideBar: React.FC = () => {
   };
 
   return (
-    <div className="bg-white h-screen w-[300px] flex flex-col">
+    <div className="bg-white sticky top-0 h-full w-[300px] flex flex-col">
       <div className="mb-[30px] p-4 w-full mx-auto flex justify-center items-center">
         <img src="/images/logo.png" alt="" className="w-[100px]" />
       </div>
@@ -74,7 +74,7 @@ export const SideBar: React.FC = () => {
           onMouseLeave={() => handleMenuItemClick(null)}
         >
           <img src="/images/admission.svg" alt="" />
-          <Link href="#">Admission</Link>
+          <Link href="/dashboard/statistic">Admission</Link>
           {isItemActive("admission") && (
             <div className="h-10 w-1 bg-primary absolute left-0 right-0"></div>
           )}
@@ -88,7 +88,7 @@ export const SideBar: React.FC = () => {
           onMouseLeave={() => handleMenuItemClick(null)}
         >
           <img src="/images/news.svg" alt="" />
-          <Link href="">Customization</Link>
+          <Link href="/dashboard/customize">Customization</Link>
           {isItemActive("customization") && (
             <div className="h-10 w-1 bg-primary absolute left-0 right-0"></div>
           )}
